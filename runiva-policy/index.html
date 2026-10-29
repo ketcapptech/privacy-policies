@@ -123,7 +123,7 @@
     <div class="container">
         <header>
             <h1>Privacy Policy</h1>
-            <p class="updated">Runiva: Run &amp; Walk &middot; Last updated October 27, 2026</p>
+            <p class="updated">Runiva: Run &amp; Walk &middot; Last updated October 29, 2026</p>
         </header>
 
         <div class="summary">
@@ -133,8 +133,9 @@
                 <strong>only while you are recording a run or walk</strong> — never in the background
                 of your daily life. Every new activity is private by default, and activities or
                 records you make public never include your exact route coordinates. Runiva shows no
-                ads, uses no analytics or crash-reporting SDKs, and does not track you across other
-                apps or sell your data. You can delete your account and its data at any time,
+                ads, uses no crash-reporting SDKs, and does not track you across other companies'
+                apps or sell your data. We use Google Analytics for Firebase only to understand, in
+                aggregate, how the app is used. You can delete your account and its data at any time,
                 directly in the app.
             </p>
         </div>
@@ -210,6 +211,17 @@
             and is not uploaded.
         </p>
         <p>
+            <strong>Apple Watch.</strong> If you record a run with the Runiva app on Apple Watch, the
+            watch, with your permission, reads your heart rate, walking and running distance, active
+            energy, and your date of birth (used only on the watch, for heart rate zones) while the
+            workout is recording, and saves the workout, its distance, energy, and GPS route to
+            Apple Health. While the run is in progress, the watch and your iPhone exchange its live
+            status (time, distance, pace, heart rate, and pause or finish controls) directly over
+            Apple's WatchConnectivity and HealthKit. When the run ends, it is transferred to your
+            iPhone and saved to your account like any other run, with the same heart rate summary
+            described above.
+        </p>
+        <p>
             Data Runiva reads from Apple Health (HealthKit) is used only to provide Runiva's fitness
             features. It is never used for advertising, marketing, or data mining, is never sold, and
             is never shared with third parties. It is not stored in iCloud.
@@ -221,6 +233,13 @@
             kudos, follows, club memberships, and challenge results — is stored so the social features
             work, and is visible to other runners only according to your privacy choices for each
             item.
+        </p>
+
+        <h3>Gear</h3>
+        <p>
+            You can optionally track your gear, such as shoes or a watch: its name, brand, model,
+            type, and the distance and runs logged with it. Gear is private to your account and is
+            shown to others only on a gear card you choose to share.
         </p>
 
         <h3>Reports &amp; Blocks</h3>
@@ -238,7 +257,19 @@
             To deliver push notifications (for example, when someone follows you, joins your club, or
             beats your Echo), we store your device's push notification token (from Apple Push
             Notification service or Firebase Cloud Messaging), your platform, and your language.
-            Runiva includes <strong>no analytics SDK, no crash-reporting SDK, and no advertising
+        </p>
+        <p>
+            <strong>Usage analytics.</strong> We use Google Analytics for Firebase to understand, in
+            aggregate, how Runiva is used. It records which screens are opened and a few product
+            events: signing up (with the goal and how you heard about Runiva), starting and
+            finishing a run (with its mode, distance, and duration), sharing, viewing and completing
+            a purchase of Runiva Pro, joining a club, following a runner, and creating an Echo.
+            Firebase assigns a random app-instance identifier and derives an approximate region from
+            your connection. We do not attach your account ID, name, email address, route, or any
+            Apple Health data (including heart rate) to these events.
+        </p>
+        <p>
+            Runiva includes <strong>no crash-reporting SDK and does not use your advertising
             identifier</strong>, and does not track you across other companies' apps or websites.
         </p>
 
@@ -246,8 +277,9 @@
         <p>
             Runiva Pro is an optional subscription. Purchases are processed by Apple's App Store or
             Google Play; payment details are handled entirely by those stores and never reach us. We
-            receive only your subscription status (through our subscription provider, RevenueCat) so
-            the app knows which features are unlocked.
+            receive your subscription status through our subscription provider, RevenueCat, so the app
+            knows which features are unlocked. RevenueCat receives your Runiva account ID, your
+            purchase and receipt history, and basic device information to do this.
         </p>
 
         <h2>Device Permissions</h2>
@@ -262,8 +294,9 @@
             <li><strong>Apple Health</strong> — to save completed workouts you choose to save; to read
                 your height and weight only when you import them; and, during a run, to read your heart
                 rate and your date of birth to calculate heart rate zones. Your date of birth from
-                Health is used only on your device and is not uploaded. You control this in iOS
-                Settings &gt; Health.</li>
+                Health is used only on your device and is not uploaded. On Apple Watch, the same
+                access is used while you record a run on the watch, as described above. You control
+                this in iOS Settings &gt; Health and in the Watch app.</li>
             <li><strong>Notifications</strong> — to send you the push notifications described above.
                 Every notification category can be turned off individually in the app, and you can
                 turn off notifications entirely in your device settings.</li>
@@ -309,9 +342,13 @@
                 records never include your exact route.</li>
             <li><strong>Live races</strong> — your live position goes only to your opponent, only
                 during the race, only if you enable live sharing.</li>
+            <li><strong>Exports and shares you start</strong> — when you export a run as a GPX file
+                or share a run or gear card to Instagram or another app, the file or image you choose
+                (which can include your route map or heart rate figures) is handed to that app and is
+                then handled under its own privacy policy.</li>
             <li><strong>Service providers</strong> — the third-party services listed below that
-                operate our authentication, database, push delivery, subscriptions, maps, and
-                moderation email. They process data only to provide their service to us, and we
+                operate our authentication, database, push delivery, subscriptions, maps, usage
+                analytics, and moderation email. They process data only to provide their service to us, and we
                 rely on them to protect it to at least the standard described in this policy;</li>
             <li><strong>Legal</strong> — if we are ever required to disclose information by law, we
                 would do so only to the extent necessary.</li>
@@ -323,6 +360,9 @@
             <li><strong>Firebase (Google LLC)</strong> — authentication, app database (Firestore), and
                 delivery of push notifications to Android devices. Your run and profile data is stored
                 in Firestore under Google's security controls.</li>
+            <li><strong>Google Analytics for Firebase (Google LLC)</strong> — aggregate usage
+                analytics, as described in <em>Usage analytics</em> above. Google processes this
+                data as our service provider and keeps it for a limited period.</li>
             <li><strong>Sign in with Apple / Google Sign-In</strong> — used only to authenticate you;
                 Runiva receives your name, email, and profile photo, not your credentials.</li>
             <li><strong>Apple Push Notification service &amp; Firebase Cloud Messaging</strong> —
@@ -339,8 +379,8 @@
                 Settings.</li>
         </ul>
         <p>
-            Runiva contains no advertising networks and no third-party analytics, tracking, or
-            crash-reporting SDKs. Apple's and Google's operating systems may collect their own
+            Runiva contains no advertising networks and no tracking or crash-reporting SDKs. Apart from
+            Google Analytics for Firebase described above, no other analytics SDK is included. Apple's and Google's operating systems may collect their own
             diagnostic data under their respective privacy policies.
         </p>
 
@@ -355,7 +395,10 @@
             personnel and occurs only when needed to operate the service (for example, automated
             server functions that process your runs), to respond to a support request you make, to
             investigate abuse or security issues, or to comply with legal obligations. Run and workout
-            history is also kept on your device for offline use and fast display.
+            history is also kept on your device for offline use and fast display. The run stats
+            shown in Runiva's Home Screen and Lock Screen widgets, Live Activities, and Apple Watch
+            complications are stored only on your devices, in a container shared by the Runiva app
+            and its extensions.
         </p>
 
         <h2>Data Retention &amp; Deletion</h2>
@@ -363,12 +406,15 @@
             We keep your data for as long as your account is active. You can delete your account at
             any time in Runiva under <em>Settings &rarr; Account &rarr; Delete Account</em>. Deleting
             your account permanently removes your profile, runs, Echoes, public records, attempts,
-            comments, kudos, follows, clubs you own and your club memberships, reports you made,
+            comments, kudos, follows, gear, clubs you own and your club memberships, club events
+            you created and your event responses, reports you made,
             runners you blocked, notifications, and push tokens. If you signed in with Apple, we also
             revoke Runiva's Sign in with Apple access. Two exceptions: finished live challenges you
             completed against another runner may be retained as part of that opponent's own history,
             without your route data; and report emails already delivered to our moderation inbox are
-            kept as long as needed to resolve the report and protect other users. Uninstalling the app
+            kept as long as needed to resolve the report and protect other users. Usage analytics
+            events are not linked to your account and expire on Google's servers after the
+            retention period we set. Uninstalling the app
             removes all data stored on your device.
         </p>
 
