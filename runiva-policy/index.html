@@ -123,7 +123,7 @@
     <div class="container">
         <header>
             <h1>Privacy Policy</h1>
-            <p class="updated">Runiva: Run &amp; Walk &middot; Last updated October 29, 2026</p>
+            <p class="updated">Runiva: Run &amp; Walk &middot; Last updated October 31, 2026</p>
         </header>
 
         <div class="summary">
@@ -148,6 +148,16 @@
             receive from your chosen provider your name, email address, and profile photo (if the
             provider shares one). You can optionally add a username, display name, bio, home city, and
             links to your public social media profiles.
+        </p>
+        <p>
+            <strong>Profile photo.</strong> You can optionally add a profile photo, chosen by you from
+            your photo library. Runiva crops and scales it down on your device and stores it with
+            your account. It is shown only to you and to runners who follow you; anyone else sees
+            your initials. Before your followers can see a new photo, it is checked automatically
+            for explicit or violent content (see <a href="#third-party">Third-Party Services</a>), and
+            a photo that does not pass is deleted. To prevent abuse, up to three new photos can be
+            checked in any 24 hours; for this we keep the times of your most recent checks, without
+            the photos. You can remove your photo at any time in Edit Profile.
         </p>
         <p>
             During setup, we ask for your date of birth to confirm that you are at least 13 years old
@@ -203,6 +213,14 @@
             height and weight only when you explicitly import them.
         </p>
         <p>
+            <strong>Importing past runs.</strong> If you choose to import runs from Apple Health,
+            Runiva reads your running workouts from the last 12 months, with their date, duration,
+            distance, and GPS route, and saves each one as a private run in your history (and in
+            your account, if you are signed in). Workouts Runiva itself saved to Apple Health are
+            skipped. Imported runs are never published unless you make one public, and they are
+            deleted with the run or your account. Runiva reads them only when you start an import.
+        </p>
+        <p>
             If you allow it, Runiva reads your heart rate from Apple Health while you record a run and
             stores a heart rate summary with that run (average and maximum heart rate, and time spent
             in each heart rate zone). This summary is part of your private run, is never included in
@@ -238,8 +256,9 @@
         <h3>Gear</h3>
         <p>
             You can optionally track your gear, such as shoes or a watch: its name, brand, model,
-            type, and the distance and runs logged with it. Gear is private to your account and is
-            shown to others only on a gear card you choose to share.
+            type, and the distance and runs logged with it. You can also add a photo of a pair of
+            shoes, which is stored with your account and visible only to you. Gear is private to
+            your account and is shown to others only on a gear card you choose to share.
         </p>
 
         <h3>Reports &amp; Blocks</h3>
@@ -292,7 +311,8 @@
             <li><strong>Precise location</strong> — requested temporarily during outdoor runs so
                 distance and pace are calculated accurately.</li>
             <li><strong>Apple Health</strong> — to save completed workouts you choose to save; to read
-                your height and weight only when you import them; and, during a run, to read your heart
+                your height and weight only when you import them; to read your past running workouts
+                and their routes only when you import them; and, during a run, to read your heart
                 rate and your date of birth to calculate heart rate zones. Your date of birth from
                 Health is used only on your device and is not uploaded. On Apple Watch, the same
                 access is used while you record a run on the watch, as described above. You control
@@ -301,7 +321,11 @@
                 Every notification category can be turned off individually in the app, and you can
                 turn off notifications entirely in your device settings.</li>
             <li><strong>Photo library (add only)</strong> — used only to save run share cards you
-                create. Runiva never reads, scans, or uploads your photos.</li>
+                create.</li>
+            <li><strong>Photo picker</strong> — when you add a profile or shoe photo, the system
+                photo picker opens, and Runiva receives only the one photo you choose. No photo
+                library permission is requested, and Runiva never reads, scans, or uploads any other
+                photo.</li>
             <li><strong>Calendar (add only)</strong> — used only to add a club event to your calendar
                 when you tap &ldquo;Add to calendar&rdquo;. On iOS 17 and later, and on Android, the
                 system's own event screen is shown and no calendar access is requested; on iOS 16
@@ -339,7 +363,10 @@
         <ul>
             <li><strong>Content you choose to share</strong> — public runs, records, Echoes, profile
                 information, and comments are visible to other signed-in Runiva users. Public runs and
-                records never include your exact route.</li>
+                records never include your exact route. Your profile photo is visible only to runners
+                who follow you. When you share an Echo, the link (runiva.app/e/&hellip;) carries only
+                the Echo's ID: the web page it opens shows no Echo details, and the Echo itself opens
+                in the app for signed-in runners.</li>
             <li><strong>Live races</strong> — your live position goes only to your opponent, only
                 during the race, only if you enable live sharing.</li>
             <li><strong>Exports and shares you start</strong> — when you export a run as a GPX file
@@ -354,12 +381,17 @@
                 would do so only to the extent necessary.</li>
         </ul>
 
-        <h2>Third-Party Services</h2>
+        <h2 id="third-party">Third-Party Services</h2>
         <p>Runiva relies on a small set of services, each used for a specific purpose:</p>
         <ul>
-            <li><strong>Firebase (Google LLC)</strong> — authentication, app database (Firestore), and
-                delivery of push notifications to Android devices. Your run and profile data is stored
-                in Firestore under Google's security controls.</li>
+            <li><strong>Firebase (Google LLC)</strong> — authentication, app database (Firestore),
+                photo storage (Cloud Storage for Firebase), and delivery of push notifications to
+                Android devices. Your run and profile data is stored in Firestore and your photos in
+                Cloud Storage, under Google's security controls.</li>
+            <li><strong>Google Cloud Vision (Google LLC)</strong> — checks each new profile photo
+                for explicit or violent content before your followers can see it. Google processes
+                the photo only to return the result, as our service provider. Shoe photos are not
+                checked, as only you can see them.</li>
             <li><strong>Google Analytics for Firebase (Google LLC)</strong> — aggregate usage
                 analytics, as described in <em>Usage analytics</em> above. Google processes this
                 data as our service provider and keeps it for a limited period.</li>
@@ -373,8 +405,8 @@
             <li><strong>Apple Maps (iOS) and Google Maps (Android)</strong> — display your route on
                 the map. The map provider processes what it needs to serve map imagery (for example,
                 your IP address and the visible map region) under its own privacy policy.</li>
-            <li><strong>Apple Health</strong> — stores workouts, shares your height and weight with
-                Runiva on request, and, if you allow it, your heart rate and date of birth during a
+            <li><strong>Apple Health</strong> — stores workouts, shares your height, weight, and past
+                running workouts with Runiva on request, and, if you allow it, your heart rate and date of birth during a
                 run. You remain in full control of this connection in iOS
                 Settings.</li>
         </ul>
@@ -386,8 +418,11 @@
 
         <h2>Data Storage &amp; Security</h2>
         <p>
-            Your account data is stored in Google Cloud (Firestore), and our server functions run in
-            Google Cloud's europe-west1 (Belgium) region. Data is transmitted over
+            Your account data is stored in Google Cloud (Firestore) in the europe-west1 (Belgium)
+            region, where most of our server functions also run. Your profile and shoe photos are
+            stored in Cloud Storage for Firebase in the United States, and the functions that check
+            profile photos and revoke Sign in with Apple run in Google Cloud's us-central1 (Iowa)
+            region. Data is transmitted over
             encrypted connections, and security rules ensure that private data (your runs, settings,
             and personal details) is readable only by you within the app; other users cannot see it.
             Content you explicitly make public is readable by other signed-in users. Runiva staff do
@@ -408,11 +443,14 @@
             your account permanently removes your profile, runs, Echoes, public records, attempts,
             comments, kudos, follows, gear, clubs you own and your club memberships, club events
             you created and your event responses, reports you made,
-            runners you blocked, notifications, and push tokens. If you signed in with Apple, we also
-            revoke Runiva's Sign in with Apple access. Two exceptions: finished live challenges you
+            runners you blocked, notifications, push tokens, and your profile and shoe photos. If you
+            signed in with Apple, we also
+            revoke Runiva's Sign in with Apple access. Three exceptions: finished live challenges you
             completed against another runner may be retained as part of that opponent's own history,
-            without your route data; and report emails already delivered to our moderation inbox are
-            kept as long as needed to resolve the report and protect other users. Usage analytics
+            without your route data; report emails already delivered to our moderation inbox are
+            kept as long as needed to resolve the report and protect other users; and the times of
+            your last profile photo checks (at most three timestamps, with no photo or other
+            content) may remain on our servers. Usage analytics
             events are not linked to your account and expire on Google's servers after the
             retention period we set. Uninstalling the app
             removes all data stored on your device.
