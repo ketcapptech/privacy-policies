@@ -123,17 +123,18 @@
     <div class="container">
         <header>
             <h1>Privacy Policy</h1>
-            <p class="updated">Tickshift &middot; Last updated September 30, 2026</p>
+            <p class="updated">Tickshift &middot; Last updated November 14, 2026</p>
         </header>
 
         <div class="summary">
             <p>
-                Tickshift is a single-player logic puzzle game. It has <strong>no accounts, no sign-in,
-                and no chat</strong>, and we do not ask for your name, email, or any other personal
-                details. Your progress and settings are stored only on your device. Tickshift is free to
-                play and shows ads from Google AdMob; AdMob processes device and advertising data to serve
-                and measure those ads, and on iOS it uses your advertising identifier only if you allow
-                tracking. A one-time Remove Ads purchase turns off the ads. We do not sell your data.
+                Tickshift is a single-player logic puzzle game. It has <strong>no Tickshift account and no
+                chat</strong>, and we do not ask for your name, email, or any other personal details. If you
+                are signed in to <strong>Game Center</strong> (iOS) or <strong>Google Play Games</strong>
+                (Android), the game uses it for its leaderboard and achievements and to back up your progress.
+                Tickshift is free to play and shows ads from Google AdMob; on iOS your advertising identifier
+                is used only if you allow tracking. It uses Google Firebase to count gameplay events and to
+                report crashes. A one-time Remove Ads purchase turns off the ads. We do not sell your data.
             </p>
         </div>
 
@@ -141,22 +142,60 @@
 
         <h3>Information We Do Not Collect</h3>
         <p>
-            Tickshift does not require or offer an account. We do not collect your name, email address,
-            phone number, contacts, photos, precise location, or health data, and the game has no chat
-            or user-generated content.
+            Tickshift does not have its own accounts. We do not collect your name, email address, phone
+            number, contacts, photos from your device, precise location, or health data, and the game has
+            no chat or user-generated content.
         </p>
 
         <h3>Game Progress &amp; Settings (On Your Device)</h3>
         <p>
             The game saves which levels you have solved and unlocked, the level you last played, your
-            language, and your music, sound, and haptics preferences. This data is stored
-            <strong>only on your device</strong> and is never sent to us. It stays until you reset your
-            progress in the game or uninstall the app.
+            language, and your music, sound, and haptics preferences. This data is stored on your device
+            and is never sent to us. It stays until you reset your progress in the game or uninstall the
+            app.
+        </p>
+
+        <h3>Progress Backup (iCloud and Google Play Games)</h3>
+        <p>
+            So you don't lose your progress when you reinstall the game or change devices, Tickshift keeps
+            a copy of your solved levels, unlocks and hints. On iOS this copy is kept in your device's
+            Keychain and in your iCloud account (iCloud key-value storage). On Android it is kept as a
+            Google Play Games saved game, if you are signed in to Play Games. The copy is stored by Apple
+            or Google in your own account and never reaches us. Resetting your progress in the game also
+            resets the backup.
+        </p>
+
+        <h3>Leaderboard &amp; Achievements (Game Center and Google Play Games)</h3>
+        <p>
+            If you are signed in to Game Center or Google Play Games, the game sends the number of levels
+            you have solved to the Tickshift leaderboard and reports your progress toward its
+            achievements. The leaderboard screen shows the players at the top and around your rank, with
+            the display name and profile picture each player has chosen in Game Center or Play Games. The
+            Friends tab shows your Game Center friends who play Tickshift; iOS asks your permission before
+            the game can see your friends list. Scores, achievements and profiles are stored by Apple or
+            Google under their own policies (<a href="https://www.apple.com/legal/privacy/">Apple Privacy
+            Policy</a>, <a href="https://policies.google.com/privacy">Google Privacy Policy</a>) and never
+            reach our servers. The game keeps the profile pictures only while the leaderboard is open. If
+            you are not signed in, nothing is sent and the leaderboard asks you to sign in.
+        </p>
+
+        <h3>Analytics &amp; Crash Reports (Google Firebase)</h3>
+        <p>
+            Tickshift uses Google Firebase Analytics and Firebase Crashlytics so we can see which levels
+            are too hard and fix crashes. Firebase records gameplay events (a level started, solved or
+            failed, and a hint used, with the level number). If the game crashes, it sends a crash report
+            (the error, the device model, the operating-system version and the app version). With these
+            Firebase also processes an app-instance identifier, your device type, language and
+            approximate location derived from your IP address, and, on iOS only if you allow tracking,
+            your advertising identifier. This data is processed by Google under the
+            <a href="https://firebase.google.com/support/privacy">Firebase privacy and security terms</a>.
+            We see it only as aggregated reports and individual crash reports, not tied to your name.
         </p>
 
         <h3>Advertising Data (Google AdMob)</h3>
         <p>
-            Tickshift shows banner ads and occasional full-screen ads between runs, provided by Google
+            Tickshift shows banner ads, occasional full-screen ads between runs and, if you choose to watch
+            one for a hint, rewarded video ads, provided by Google
             AdMob through the Google Mobile Ads SDK. To deliver, limit, and measure ads and to prevent
             fraud, the SDK may collect:
         </p>
@@ -204,15 +243,21 @@
 
         <h2>Device Permissions</h2>
         <p>
-            The only permission Tickshift may request is <strong>App Tracking Transparency</strong> on
-            iOS, described above. Tickshift does not request access to your location, camera,
+            On iOS, Tickshift may request <strong>App Tracking Transparency</strong>, described above, and
+            <strong>access to your Game Center friends</strong>, for the leaderboard's Friends tab. You
+            can change either at any time in your device's settings. Tickshift does not request access to
+            your location, camera,
             microphone, photos, contacts, or health data. Haptic feedback uses your device's vibration
             and can be turned off in the game's settings.
         </p>
 
         <h2>How We Use Information</h2>
         <ul>
-            <li>Save your puzzle progress and settings on your device;</li>
+            <li>Save your puzzle progress and settings on your device, and back them up to your iCloud or
+                Play Games account;</li>
+            <li>Show the leaderboard and achievements through Game Center or Google Play Games;</li>
+            <li>Understand how players move through the levels, and find and fix crashes, through
+                Firebase;</li>
             <li>Show ads that keep the game free, through Google AdMob, according to your consent and
                 tracking choices;</li>
             <li>Turn off ads and restore your Remove Ads purchase;</li>
@@ -227,29 +272,42 @@
         <ul>
             <li><strong>Google AdMob (Google LLC)</strong> &mdash; serves and measures ads and, where
                 required, shows the consent message (User Messaging Platform).</li>
+            <li><strong>Google Firebase (Google LLC)</strong> &mdash; gameplay analytics (Firebase
+                Analytics) and crash reports (Firebase Crashlytics).</li>
+            <li><strong>Apple Game Center and iCloud</strong> &mdash; the leaderboard, achievements, friends
+                and the progress backup on iOS.</li>
+            <li><strong>Google Play Games Services</strong> &mdash; the leaderboard, achievements and the
+                progress backup on Android.</li>
             <li><strong>Apple App Store and Google Play</strong> &mdash; process the Remove Ads purchase
                 and restore it.</li>
             <li><strong>Unity</strong> &mdash; the game engine and its in-app purchasing library, which
                 pass the purchase between the game and the store.</li>
         </ul>
         <p>
-            Tickshift contains no analytics or crash-reporting SDK of its own. The privacy policy and
-            terms pages open in your device's in-app browser, which follows your browser's own privacy
+            The privacy policy and terms pages open in your device's in-app browser, which follows your browser's own privacy
             settings. Apple's and Google's operating systems may collect their own diagnostic data under
             their respective privacy policies.
         </p>
 
         <h2>Data Storage &amp; Security</h2>
         <p>
-            We do not operate servers that store your data. Game progress and settings stay on your
-            device. Advertising data is transmitted over encrypted connections to Google and handled
-            under Google's security controls.
+            We do not operate servers that store your data. Game progress and settings stay on your device
+            and in your own iCloud or Play Games account. Leaderboard and achievement data is held by
+            Apple or Google. Advertising, analytics and crash data is sent over encrypted connections to
+            Google and handled under Google's security controls.
         </p>
 
         <h2>Data Retention &amp; Deletion</h2>
         <ul>
             <li>Reset your puzzle progress at any time in <em>Settings &rarr; Reset Progress</em>.</li>
-            <li>Uninstalling Tickshift removes all game data stored on your device.</li>
+            <li>Uninstalling Tickshift removes the game data stored on your device; the backup in your
+                iCloud or Play Games account stays so a reinstall can restore it (reset your progress
+                first to clear it).</li>
+            <li>Your leaderboard scores and achievements are kept by Game Center or Google Play Games.
+                You can manage or remove your Game Center data in <em>Settings &rarr; Game Center</em>
+                and your Play Games data in the Google Play Games app or your Google account.</li>
+            <li>Analytics and crash data is kept by Firebase for a limited time under Google's retention
+                settings.</li>
             <li>Advertising data is retained by Google under its own policies. You can reset your
                 advertising identifier in your device settings and manage Google data at
                 <a href="https://myaccount.google.com/">myaccount.google.com</a>.</li>
@@ -270,6 +328,8 @@
             <li>Reset your advertising identifier or opt out of ads personalization on your device;</li>
             <li>Remove all ads with a one-time purchase;</li>
             <li>Reset your progress or uninstall the app to delete your game data;</li>
+            <li>Play without signing in to Game Center or Play Games, which keeps you off the leaderboard;</li>
+            <li>Allow or deny the game's access to your Game Center friends in your device settings;</li>
             <li>Contact us at the address below with any privacy question or request.</li>
         </ul>
         <p>
